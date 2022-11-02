@@ -1,38 +1,129 @@
-.App {
-  text-align: center;
+/* scss-lint:disable VendorPrefix, Indentation */
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+body {
+    background: #616161;
+    color:  #fafafa;
+    font-family: 'Poppins', Helvetica, Arial, Sans-Serif;
+    text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login-btn {
+  background: #b3e5fc;
+  border: 0;
+  border-radius: 6px;
+  color: #212121;
+  cursor: pointer;
+  display: block;
+  font-size: 1.5em;
+  font-weight: 300;
+  margin: 20px auto;
+  padding: 10px;
+  width: 330px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.login-btn:active {
+  background: #03a9f4;
+  color: #212121;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.login-btn:hover {
+  background: #4fc3f7;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .65);
+  color: #fff;
+  text-shadow: 0 0 1px rgba(0, 0, 0, .65);
 }
 
-.App-link {
-  color: #61dafb;
+.panel {
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .65);
+    color: #212121;
+    height: 300px;
+    left: 0;
+    margin: 0 auto 150px;
+    overflow: hidden;
+    padding-top: 30px;
+    position: relative;
+    right: 0;
+    top: 50px;
+    width: 400px;
+    z-index: 200;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.panel-group {
+    margin-bottom: 35px;
+    margin-left: 40px;
+    position: relative;
+}
+
+.input {
+    border: 0;
+    border-bottom: 1px solid #212121;
+    display: block;
+    font-size: 1em;
+    padding: 10px 10px 10px 5px;
+    width: 300px;
+}
+
+
+label {
+    color: #999;
+    font-size: 14px;
+    font-weight: normal;
+    left: 5px;
+    pointer-events: none;
+    position: absolute;
+    top: 10px;
+}
+
+.input:focus ~ label,
+.input:valid ~ label {
+    color: #4fc3f7;
+    font-size: .75em;
+    font-weight: bold;
+    top: -15px;
+}
+
+.border {
+    display: block;
+    position: relative;
+    width: 315px;
+}
+
+.border::before,
+.border::after {
+    background: #03a9f4;
+    bottom: 1px;
+    content: '';
+    height: 2px;
+    position: absolute;
+    width: 0;
+}
+
+.border::before {
+    left: 50%;
+}
+
+.border::after {
+    right: 50%;
+}
+
+.input:focus ~ .border::before,
+.input:focus ~ .border::after {
+    width: 50%;
+}
+
+.panel-footer {
+    font-size: .75em;
+}
+
+footer {
+    bottom: 0;
+    overflow: hidden;
+    padding: 0;
+    width: 100%;
+}
+
+.follow {
+    margin: 0 auto;
 }
