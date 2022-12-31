@@ -1,6 +1,6 @@
 
 ## Live Preview
-Open [https://react-login-form-one.vercel.app/](https://react-login-form-one.vercel.app/) to view live preview
+Open [https://amit-patel-react-login-form-one.vercel.app/](https://amit-patel-react-login-form-one.vercel.app/) to view live preview
 ## Available Scripts
 
 In the project directory, you can run:
